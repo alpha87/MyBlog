@@ -1,0 +1,77 @@
+a {
+    color: #000000;
+}
+
+pre {
+    background: #f2f2f2;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.blog-footer {
+    margin-top: 100px;
+}
+
+.article-title {
+    text-align: center;
+}
+
+.index-title {
+    margin-top: 40px;
+}
+
+.article-info {
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: darkgrey;
+    text-align: center;
+}
+
+.article-body {
+    margin-top: 30px;
+}
+
+.article-excerpt {
+    margin-top: 30px;
+    color: darkgray;
+    text-align: center;
+}
+
+.article-footer {
+    margin-top: 30px;
+    font-size: 0.85em;
+    color: darkgrey;
+    text-align: right;
+}
+
+.blog-record {
+    color: darkgray;
+}
+
+textarea {
+    margin-top: 10px;
+}
+
+.btn-default {
+    margin-top: 10px;
+}
+time.comment-submit-date {
+    font-size: 0.85em;
+    color: darkgrey;
+}
+
+span.nickname {
+    font-size: 0.85em;
+    color: darkgrey;
+}
+
+.pagination>li>a, .pagination>li>span {
+    color: #999;
+}
+
+.pagination-item {
+    text-align: center;
+}
