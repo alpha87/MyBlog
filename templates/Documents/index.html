@@ -15,30 +15,32 @@
         {% empty %}
             <div class="no-article">暂时还没有发布的文章！</div>
         {% endfor %}
-    </div>
 
-    <!-- 分页开始 -->
-        <div class="pagination-item">
-            <ul class="pagination">
-            <li><a href="?page=1">首页</a></li>
-                 {% if post_list.has_previous %}
+        {% if post_list %}
+            <!-- 分页开始 -->
+            <div class="pagination-item">
+                <ul class="pagination">
+                    <li><a href="?page=1">首页</a></li>
+                    {% if post_list.has_previous %}
                         <li><a href="?page={{ post_list.previous_page_number }}">上一页</a></li>
-                {% endif %}
+                    {% endif %}
 
-                 {% for num in post_list.paginator.page_range %}
-                    <li>
-                        <a href="?page={{ num }}">
-                            {{ num }}
-                        </a>
-                    </li>
-                 {% endfor %}
+                    {% for num in post_list.paginator.page_range %}
+                        <li>
+                            <a href="?page={{ num }}">
+                                {{ num }}
+                            </a>
+                        </li>
+                    {% endfor %}
 
-                {% if post_list.has_next %}
-                     <li><a href="?page={{ post_list.next_page_number }}">下一页</a></li>
-                {% endif %}
-                <li><a href="?page={{ post_list.paginator.num_pages }}">尾页</a></li>
-             </ul>
-        </div>
-        <!-- 分页结束 -->
+                    {% if post_list.has_next %}
+                        <li><a href="?page={{ post_list.next_page_number }}">下一页</a></li>
+                    {% endif %}
+                    <li><a href="?page={{ post_list.paginator.num_pages }}">尾页</a></li>
+                </ul>
+            </div>
+            <!-- 分页结束 -->
+        {% endif %}
+    </div>
 
 {% endblock content %}
